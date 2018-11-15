@@ -6,13 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { DynamicTabComponent } from './dynamic-tab/dynamic-tab.component';
 import { FaInputComponent } from './fa-input/fa-input.component';
 import { InputRefDirective } from './shared/input-ref.directive';
+import { ChangeBgColorDirective } from './shared/change-bg-color.directive'; // Demo usage of @HostListener() and @HostBinding() listeners
 
 @NgModule({
   declarations: [
     AppComponent,
     DynamicTabComponent,
     FaInputComponent,
-    InputRefDirective
+    InputRefDirective,
+    ChangeBgColorDirective
   ],
   imports: [
     BrowserModule,
