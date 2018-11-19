@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ContentChild } from '@angular/core';
+import { Component, OnInit, Input, ContentChild, HostBinding } from '@angular/core';
 import { InputRefDirective } from '../shared/input-ref.directive';
 
 @Component({
@@ -11,7 +11,12 @@ export class FaInputComponent implements OnInit {
 
   @ContentChild(InputRefDirective)
   input: InputRefDirective;
-  
+
+  @HostBinding("class.focus")
+  get focus() {
+    return this.input ? this.input.focus : false;
+  }
+
   constructor() { }
 
   ngOnInit() {
