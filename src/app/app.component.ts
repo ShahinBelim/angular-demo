@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router, RouterEvent, NavigationEnd } from '@angular/router';
+import { filter, map, mergeMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  private url: string;
+
+  constructor(
+    public activatedRoute: ActivatedRoute,
+    public router: Router
+  ) {
+
+  }
+
+
+  scrollTop() {
+    window.scrollTo(0, 0);
+  }
 }

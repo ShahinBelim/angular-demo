@@ -27,8 +27,8 @@ export class FaInputComponent implements OnInit {
       fa: true
     }
     classes['fa-' + this.icon] = true;
-    console.log("this.icon : ", this.icon);
-    console.log("classes : ", classes);
+    //console.log("this.icon : ", this.icon);
+    //console.log("classes : ", classes);
     return classes;
   }
 }
